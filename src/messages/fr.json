@@ -1,0 +1,16 @@
+{
+  "sidebar": {
+    "menu": "Menu",
+    "home": "Accueil",
+    "characters": "Personnages",
+    "warp_counter": "Saut hyperespace",
+    "calculator": "Calculatrice",
+    "timeline": "Chronologie",
+    "database": "Base de données",
+    "settings": "Paramètres",
+    "items": "Objets",
+    "artifacts": "Artéfacts",
+    "light_cones": "Cônes de lumière",
+    "success": "Succès"
+  }
+}

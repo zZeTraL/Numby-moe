@@ -1,0 +1,16 @@
+{
+  "sidebar": {
+    "menu": "Menu",
+    "home": "Home",
+    "characters": "Characters",
+    "warp_counter": "Warp Counter",
+    "calculator": "Calculator",
+    "timeline": "Timeline",
+    "database": "Database",
+    "settings": "Settings",
+    "items": "Items",
+    "artifacts": "Artifacts",
+    "light_cones": "Light Cones",
+    "success": "Success"
+  }
+}
