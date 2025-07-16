@@ -2,6 +2,9 @@
 import { notFound } from "next/navigation";
 import React from "react";
 
+// Nuqs
+import { NuqsAdapter } from "nuqs/adapters/next/app";
+
 // I18n
 import { routing } from "@/src/i18n/routing";
 import { Locale, NextIntlClientProvider, hasLocale } from "next-intl";
@@ -10,12 +13,12 @@ import { Locale, NextIntlClientProvider, hasLocale } from "next-intl";
 import "@/app/[locale]/globals.css";
 
 // Components
-import AppBreadcrumb from "@/components/Breadcrumb";
 import Footer from "@/components/footer/Footer";
 import AppSidebar from "@/components/sidebar/Sidebar";
-import SideLine from "@/components/SideLine";
 import { Separator } from "@/components/ui/separator";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import AppBreadcrumb from "@/components/utils/Breadcrumb";
+import SideLine from "@/components/utils/SideLine";
 
 // Metadata
 export const metadata = {
@@ -29,7 +32,7 @@ import DecoTrainImage from "@/public/DecoTrainBig.svg";
 
 const MainContent = ({ children }: { children: React.ReactNode }) => (
     <div className="flex min-h-screen w-screen overflow-hidden">
-        <main className="bg-foreground relative z-10 m-4 flex w-full flex-col gap-4 rounded-xl p-4">
+        <main className="bg-foreground relative z-10 m-4 flex w-full flex-col gap-8 rounded-xl p-4">
             <BackgroundImage
                 src={DecoTrainImage}
                 alt="DecoTrain"
@@ -66,12 +69,14 @@ export default async function LocaleLayout({
     return (
         <html lang={locale}>
             <body>
-                <NextIntlClientProvider>
-                    <SidebarProvider>
-                        <AppSidebar />
-                        <MainContent>{children}</MainContent>
-                    </SidebarProvider>
-                </NextIntlClientProvider>
+                <NuqsAdapter>
+                    <NextIntlClientProvider>
+                        <SidebarProvider>
+                            <AppSidebar />
+                            <MainContent>{children}</MainContent>
+                        </SidebarProvider>
+                    </NextIntlClientProvider>
+                </NuqsAdapter>
             </body>
         </html>
     );

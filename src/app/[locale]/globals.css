@@ -47,10 +47,11 @@
 
     --font-hsr: "HonkaiStarRail", sans-serif;
     --font-first: "FirstWorld", sans-serif;
-    --color-dark-blue: #262940;
+    --color-dark-blue: #262941;
     --color-light-blue: #2b2d48;
     --color-space-blue: #5e71ff;
     --color-space-pink: #ff98ef;
+    --color-green: #2ecc71;
 
     --color-welcome-card: oklch(0% 0 0 / 12%);
     --color-important: oklch(72.39% 0.1426 276.5);
@@ -142,7 +143,7 @@
         @apply border-border outline-ring/50;
     }
     body {
-        @apply bg-background text-white font-hsr;
+        @apply bg-background font-hsr text-white;
     }
 }
 
@@ -154,4 +155,10 @@
 @font-face {
     font-family: "FirstWorld";
     src: url("../../../public/fonts/FirstWorld.ttf") format("truetype");
+}
+
+@layer components {
+    [data-state="open"] .chevron-icon {
+        @apply rotate-180;
+    }
 }

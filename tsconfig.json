@@ -22,8 +22,13 @@
             "@/*": ["./src/*"],
             "@/public/*": ["./public/*"],
             "@/src/*": ["./src/*"],
+            "@/app/*": ["./src/app/*"],
             "@/components/*": ["./src/components/*"],
-            "@/utils/*": ["./src/utils/*"]
+            "@/utils/*": ["./src/utils/*"],
+            "@/ui/*": ["./src/components/ui/*"],
+
+            // pages
+            "@/characters/*": ["./src/app/[locale]/characters/*"]
         }
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

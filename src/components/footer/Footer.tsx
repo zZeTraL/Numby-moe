@@ -8,7 +8,7 @@ import { getTranslations } from "next-intl/server";
 import { footerLinks, LinkType } from "@/utils/links";
 
 // Components
-import RichText from "@/components/RichText";
+import RichText from "@/components/utils/RichText";
 import FooterLink from "./FooterLink";
 
 // Static assets

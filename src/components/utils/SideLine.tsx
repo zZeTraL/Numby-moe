@@ -18,8 +18,8 @@ export default function SideLine() {
 
     return (
         <div className="relative h-full md:px-2">
-            <div className="flex justify-center bg-gradient-to-b from-space-blue from-15% to-space-pink w-[2px] h-full rounded-2xl relative">
-                <span className="absolute bottom-20 rotate-90 bg-foreground px-2 whitespace-nowrap uppercase font-first text-xs tracking-[0.27em]">
+            <div className="from-space-blue to-space-pink relative flex h-full w-[2px] justify-center rounded-2xl bg-gradient-to-b from-15%">
+                <span className="bg-foreground font-first absolute bottom-20 rotate-90 px-2 text-xs tracking-[0.27em] whitespace-nowrap uppercase">
                     {path}
                 </span>
             </div>
